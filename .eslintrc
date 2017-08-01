@@ -1,0 +1,9 @@
+{
+    "extends": "eslint-config-airbnb",
+    "rules": {
+        "indent": ["error", 4],
+        "func-names": "off",
+        "no-param-reassign": "off",
+        "import/newline-after-import": "off"
+    }
+}

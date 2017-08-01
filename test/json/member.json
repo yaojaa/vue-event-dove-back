@@ -1,0 +1,37 @@
+{
+	"memberGroupBasic":
+	{
+		"name": "GMGC",
+		"logo": "https://twitter.com/thegmgc",
+		"description": "The #GMGC Global Mobile Game Confederation is an #international #platform for #mobilegaming companies to create lasting #partnerships and access new markets.",
+		"userId":"6243870883740520448",
+		"subDomain": "gmgc",
+        "duesType": "free"
+	},
+
+	"memberGroupForFreeUpdate":
+	{
+		"duesType": "free"
+	},
+
+    "memberGroupForPayUpdate":
+    {
+        "duesType": "year",
+        "duesCurrency": "yuan",
+        "duesAmount": 40,
+        "duesNotice": "此为会员年费",
+        "notify":
+        {
+            "needNotify": true,
+            "beforeDays": 15
+        }
+    },
+
+	"member":
+	{
+		"email": "newmember@eventdove.com",
+		"membershipId": "",
+		"name": "Cao Cao",
+		"status": "inactive"
+	}
+}

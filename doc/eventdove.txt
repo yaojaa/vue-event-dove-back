@@ -1,0 +1,100 @@
+﻿会鹆数据库梳理：
+
+会鹆业务数据主表包括：
+1. 会鹆用户
+   a.  会鹆注册用户相关表
+        `Login`    注册用户(主表)      `UserFlux`     用户短信邮件余量表（主表） EdLoginRole 用户VIP等级时效表(主表) 
+        `MessagesInfo`  站内信明细表   `EmailCheck`   手机注册绑定邮箱
+
+   b. 微信绑定登录用户
+         `WeiXinUser`     微信用户表    `WeiXinInfo`      微信用户信息表   `OtherLogin`   第三方登录方式表
+
+
+2. 活动
+     a. 活动
+      `Event`   活动（主表）
+      `EventActivity`    活动动态表  `EventActivityAction`   活动动态对应类型表   `EventRelate`  主活动子活动关联表
+      `EventResource`活动资源关联表   `EventSpeaker`   活动嘉宾    `EventContact`     活动网站联系方式表  
+      `EventContactInfo`    活动联系方式详情表   `EventBlockList`  活动首页显示列表    `EventMessage`    活动留言  Speaker`    演讲嘉宾表
+      `ConfigSetting`    活动个性化设置    `TrackCode`    追踪码   `SharedLinks`   分享链拉地址    `RaffleIitem`    抽奖奖项表
+
+     b. 收集器
+      `CollectionFunction`    采集数据类型表    `CollectionPoint`    采集点信息表   `CollectionData`  数据采集点收集到的参会者数据信息表
+      `PointDataResource`   采集点使用者资料  `PointFunction` 采集点用户 
+
+     c. 票
+     `Ticket`     活动票（主表）
+     `RefundTicketDetail`    退票明细     `TicketApplyKey`    活动票锁定临时表    `TicketPurchaseLimit`     活票定购限制
+     `TicketExplain`    自定义门票样式表
+
+     d. 参会者
+      `Attendee`   参会人员表（主表）   `AttendeeTicket`   参会者票表（主表）
+      `WeiXinUserAttendee`    微信参会者表    `WeiXinAttendeeInfo`     微信参会人信息表   `EventRegForm`   活动报名人员收集项
+      
+     e. 活动日程
+       `Agenda`  活动日程表
+
+     f. 服务费
+       `EventFee` 活动单列服务费表    `FeeFunction`    会鹆收费功能列表 
+
+      g. 采集项
+         `FormField`   活动表单收集项(主表)  
+        `RegisterField`    活动表单收集项校验列表        `TicketInvoiceRegForm`   票所开发票注册表单
+        `TicketInvoiceRegisterField`   票所开发票注册表各单字段验证表               TicketOrderFormField`     定单采集字段表
+       `TicketOrderRegForm`     定单注册表单项           TicketOrderRegisterField`   定单注册表各单字段验证表
+
+     h. 主办方
+      `Organizer`   主办方列表     `OrganizerCustomInfo`  主办方自定义信息表 
+
+     i. 问卷
+     `Question`      问卷调查表    `QuestionAnswer`   问卷答案表   `QuestionMessages`   问卷信息表
+
+     g. 胸卡
+        `EventBadge`  活动胸卡(主表)
+
+     k. 优惠码
+        `Discount`   优惠码（主表）
+        `DiscountUsedLog`    优惠码使用记录
+    
+3. 定单
+     `TicketOrder`    定单表（主表）`PayOrder`    支付定单（主表）
+     `TicketOrderDetail`      定单详情表    `RechargeHistory`   充值记录表   `Payment`    支付方式表  `OfflinePayment`     线下支付方式表
+     `FeeFunctionOrder`  会鹆收费功能定单  `EventOfflinePayment`   活动及线下支付关系表   
+
+4. 发票
+     `InvoiceNote`    发票备注   `EventOrderInvoice`   定单发票表  `TicketInvoiceFormField`   票所开发票表单字段表
+
+5. 邮件短信
+     `EventSmsTemplate`   活动短信模版（主表）   `EventMailTemplate`    活动邮件模版（主表）  `EventMailLimitConfig`   活动邮件流量设置（主表）    `EventEmailNum` 活动邮件已用及可用量（主表）
+     `ShortMessage`    短信表        `SmsSecurityCode`    短信验证码   `EventMail`    活动邮件表  `EmailHistory`   历史邮件表
+     `EmailConfig`     邮件模版设置表  `CustomMailTemplateDetail`   邮件模版详情  `CustomMailTemplate`   自定义邮件模版
+
+6. 字典表
+    `City`    城市           `CityRegion`   城市区域           `Country`   国家        `CountryRegion`   国家区域      `Province`    省份    
+     `SmsBlackList`    短信黑字典      `State`   美国地区表        `PaymentType`    支付方式类型        `IpAddress`    ip地区对照表
+    `EventCategory` 活动分类表
+
+7. 会鹆资源表
+    `Resource`    资源表
+
+8. 站内信
+    `Message`  站内信表    `WebSiteInBox`     站内消息表   `WebSiteOutBox`      站内消息发件箱
+
+9. 微站
+         活动
+              `EventMenu`   活动模块表               `SkinTemplate`     网站皮肤模版表                 `DefineSkin`   活动微站皮肤  
+              `ModuleData`   微站模块数据           `ModuleDataDescription`    微站模块描述        `SiteBottom`    活动页面前台微站 底部表
+              `Site`        活动页面前台微站表         `SiteHeader`    活动页面前台微站 头部表        `SiteInfo`    活动页面前台微站 主信息表
+                `EventSubmenu`  活动子菜单表        `MobileModuleConfig`   移动端模块配置表       `MobilePageTemplate`   移动端微站模版
+              `MobileSiteMenu`   移动微站菜单模块    `SiteLayout`     活动页面前台微站 布局表   `SiteMenuItem`   活动页面前台微站 菜单项表
+              `SiteMenuModule`   活动页面前台微站 菜单模块表       `SiteMenuModuleSkin`    活动页面前台微站 菜单模块皮肤表
+              `SiteModule`     活动页面前台微站 模块表   `SiteTemplate`    活动页面前台微站模板表   `Skin`      网站皮肤表
+              `SkinCustom`      自定义皮肤表  
+               
+              `Subdomains`       活动微站二级域名表   
+
+         主办方
+              `OrganizerSkin`  主办方微站皮肤表
+10. 微信
+         `WeiXinMenu`     当前服务类型表
+     

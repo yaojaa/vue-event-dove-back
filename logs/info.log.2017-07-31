@@ -1,0 +1,34 @@
+{"level":"info","message":"Loading vip black list...","timestamp":"2017-07-31 13:52:57:190"}
+{"level":"info","message":"Redis client is ready.","timestamp":"2017-07-31 13:52:57:839"}
+{"level":"info","message":"6295797945711333376","timestamp":"2017-07-31 13:59:11:285"}
+{"level":"info","message":"order","timestamp":"2017-07-31 13:59:11:288"}
+{"level":"info","message":"Loading vip black list...","timestamp":"2017-07-31 17:35:55:560"}
+{"level":"info","message":"Redis client is ready.","timestamp":"2017-07-31 17:35:56:140"}
+{"level":"info","message":"Loading vip black list...","timestamp":"2017-07-31 17:45:08:737"}
+{"level":"info","message":"Redis client is ready.","timestamp":"2017-07-31 17:45:09:043"}
+{"level":"info","message":"Loading vip black list...","timestamp":"2017-07-31 17:47:41:607"}
+{"level":"info","message":"Redis client is ready.","timestamp":"2017-07-31 17:47:41:956"}
+{"errorCode":2,"responseText":"nextId is not defined","level":"error","message":"Error happened!! ","timestamp":"2017-07-31 17:48:23:722"}
+{"errorCode":2,"responseText":"nextId is not defined","level":"error","message":"Error happened!! ","timestamp":"2017-07-31 18:11:41:716"}
+{"errorCode":2,"responseText":"nextId is not defined","level":"error","message":"Error happened!! ","timestamp":"2017-07-31 18:12:21:254"}
+{"level":"info","message":"Loading vip black list...","timestamp":"2017-07-31 18:12:58:880"}
+{"level":"info","message":"Redis client is ready.","timestamp":"2017-07-31 18:12:59:404"}
+{"errorCode":2,"responseText":"Value for [path] must be defined.","level":"error","message":"Error happened!! ","timestamp":"2017-07-31 18:13:12:986"}
+{"errorCode":2,"responseText":"Value for [path] must be defined.","level":"error","message":"Error happened!! ","timestamp":"2017-07-31 19:38:57:820"}
+{"errorCode":2,"responseText":"Value for [path] must be defined.","level":"error","message":"Error happened!! ","timestamp":"2017-07-31 19:39:14:547"}
+{"level":"info","message":"Loading vip black list...","timestamp":"2017-07-31 19:39:35:794"}
+{"level":"info","message":"Redis client is ready.","timestamp":"2017-07-31 19:39:36:310"}
+{"level":"info","message":"Loading vip black list...","timestamp":"2017-07-31 19:39:39:300"}
+{"level":"info","message":"Redis client is ready.","timestamp":"2017-07-31 19:39:39:609"}
+{"errorCode":2,"responseText":"Value for [title][fontSize] must be a string or null.","level":"error","message":"Error happened!! ","timestamp":"2017-07-31 19:39:48:111"}
+{"level":"info","message":"Loading vip black list...","timestamp":"2017-07-31 19:40:35:711"}
+{"level":"info","message":"Redis client is ready.","timestamp":"2017-07-31 19:40:36:054"}
+{"errorCode":2,"responseText":"Value for [date][fontSize] must be a string or null.","level":"error","message":"Error happened!! ","timestamp":"2017-07-31 19:40:37:372"}
+{"level":"info","message":"Loading vip black list...","timestamp":"2017-07-31 19:41:26:656"}
+{"level":"info","message":"Redis client is ready.","timestamp":"2017-07-31 19:41:26:957"}
+{"level":"info","message":"Loading vip black list...","timestamp":"2017-07-31 19:41:28:631"}
+{"level":"info","message":"Redis client is ready.","timestamp":"2017-07-31 19:41:28:986"}
+{"errorCode":2,"responseText":"Value for [qrCode][fill] must be an object or null.","level":"error","message":"Error happened!! ","timestamp":"2017-07-31 19:41:29:672"}
+{"level":"info","message":"Loading vip black list...","timestamp":"2017-07-31 19:43:03:625"}
+{"level":"info","message":"Redis client is ready.","timestamp":"2017-07-31 19:43:03:928"}
+{"statusCode":200,"errorCode":0,"responseText":{"guest":{"align":"center","color":"#00f","fill":"#c49e60","fontSize":40,"height":45.2,"index":0,"isShow":true,"left":57,"name":"参会人姓名","text":"某某某","top":149,"width":120},"address":{"align":"center","fill":"#f00","fontSize":20,"height":22.6,"index":1,"isShow":true,"left":49,"name":"地点","text":"活动的详细地址","top":210,"width":140},"date":{"align":"center","fill":"blue","fontSize":20,"height":22.6,"index":2,"isShow":true,"left":36,"name":"时间","text":"2017-01-01 上午10:00","top":57,"width":183.88},"bgimg":"/images/template/bg2.jpg","qrCode":{"fill":"rgb(0,0,0)","height":240,"index":4,"isShow":true,"left":43,"name":"报名二维码","src":"/images/event_dove_code.jpg","top":256,"width":240},"title":{"align":"center","fill":"green","fontSize":30,"height":33.9,"index":3,"isShow":true,"left":42,"name":"活动名称","text":"互联网大会","top":105,"width":150},"id":"6297753276901363712"},"level":"error","message":"Error happened!! ","timestamp":"2017-07-31 19:43:07:915"}

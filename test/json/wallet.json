@@ -1,0 +1,45 @@
+{
+	"createWallet": 
+	{
+		"userId": "6243870883740520448"
+	},
+	"verification":
+	{
+		"name": "卢俊义",
+		"idType": "身份证",
+		"idNumber": "433982127649873291"
+	},
+	"personalAccount":
+	{
+		"type":"personal",
+		"ownerName": "卢俊义",
+		"ownerIdNumber": "433982127649873291",
+		"bankName": "中国工商银行",
+		"bankAccount": "4608886666899",
+		"bankProvince": "浙江",
+		"bankCity": "杭州",
+		"bankBranch": "西湖支行",
+		"password": "238975466"
+	},
+	"bussinessAccount":
+	{
+		"companyName": "google",
+		"representativeName": "Larry Page",
+		"representativeId": "422989288838866666",
+		"contact": "contat@gmail.com",
+		"licenseImage": "",
+
+		"bankName": "中国工商银行",
+		"bankAccount": "4608886666899",
+		"bankProvince": "浙江",
+		"bankCity": "杭州",
+		"bankBranch": "西湖支行",
+
+		"auditStatus": "审核中",
+		"auditNotes": ""
+	},
+	"payPalAccount": 
+	{
+		"account":"ipaypal@gmail.com"
+	}
+}

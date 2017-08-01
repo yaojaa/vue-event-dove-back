@@ -1,0 +1,153 @@
+{
+	"successfulEvent":
+	            {
+             "title": "测试活动333",
+             "content": [
+                 {
+                     "label": "活动介绍",
+                     "content": "活动介绍"
+                 },
+                 {
+                     "label": "活动详情",
+                     "content": "活动详情"
+                 },
+                 {
+                     "label": "活动嘉宾",
+                     "content": "活动嘉宾"
+                 }
+             ],
+             "logoUrl": "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png",
+             "bannerUrl": "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white_fe6da1ec.png",
+             "startTime": "2017-01-22T08:33:35.000Z",
+             "endTime": "2017-01-23T08:33:35.000Z",
+             "isPublic": true,
+             "askPromotion": true,
+             "smsNotice": true,
+             "userId": "6243870883740520448",
+             "groupId": "123456789",
+             "organizerIds": [
+                 ""
+             ],
+             "categories": [
+                 "1",
+                 "2"
+             ],
+             "keyWords": [
+                 "北京会唐网",
+                 "会鸽网"
+             ],
+             "country": "北京",
+             "province": "北京",
+             "city": "北京",
+             "zipCode": "100010",
+             "detailedAddress": "北京市朝阳区朝阳路泰禾文化大厦A座4层会唐网",
+             "lng": 11.111,
+             "lat": 39.111,
+             "onlineAddress": false,
+             "geohash": "wxaddjd",
+             "paymentAccountId": "123456789",
+             "paymentAccountType": "online",
+             "paymentPriceUnit": "yuan",
+             "basePrice": 100.05,
+             "percent": 1,
+             "maxFee": 500.21,
+             "tickets": [
+                 {
+                     "name": "早鸟票",
+                     "describe": "111",
+                     "needAudit": false,
+                     "defaultPrice": 100,
+                     "startSalesTime": "2017-01-22T08:33:35.000Z",
+                     "endSalesTime": "2018-01-23T08:33:35.000Z",
+                     "totalCount": 88,
+                     "soldCount": 0,
+                     "minCount": 1,
+                     "maxCount": 100,
+                     "isContainFee": true,
+                     "ticketServiceFee": 80,
+                     "isMemberOnlyTicket": false,
+                     "isAllowGroupPurchase": false,
+                     "groupPurchaseTicketSetting": {
+                         "minGroupCount": 10,
+                         "preferentialType": "fixed",
+                         "value": 5,
+                         "isAllowDiscount": false
+                     }
+                 },
+                 {
+                     "name": "第八届互联网吹牛皮大会门票122",
+                     "describe": "111",
+                     "needAudit": false,
+                     "defaultPrice": 100,
+                     "startSalesTime": "2017-01-22T08:33:35.000Z",
+                     "endSalesTime": "2018-01-23T08:33:35.000Z",
+                     "totalCount": 88,
+                     "soldCount": 0,
+                     "minCount": 1,
+                     "maxCount": 100,
+                     "isContainFee": true,
+                     "ticketServiceFee": 80,
+                     "isMemberOnlyTicket": false,
+                     "isAllowGroupPurchase": false,
+                     "groupPurchaseTicketSetting": {
+                         "minGroupCount": 10,
+                         "preferentialType": "fixed",
+                         "value": 5,
+                         "isAllowDiscount": false
+                     }
+                 }
+             ],
+             "collectItems": [
+                 {
+                     "itemName": "name",
+                     "displayName": "姓名",
+                     "fieldType": "text",
+                     "regexp": "[\\\\S]{1,128}",
+                     "maxFileSize": 100,
+                     "isRequired": true,
+                     "displayOrder": 0,
+                     "isDeleted": false,
+                     "isUnique": true
+                 },
+                 {
+                     "itemName": "email",
+                     "displayName": "邮件",
+                     "fieldType": "text",
+                     "regexp": "[\\\\S]{1,128}",
+                     "maxFileSize": 100,
+                     "isRequired": true,
+                     "displayOrder": 0,
+                     "isDeleted": false,
+                     "isUnique": true
+                 },
+                 {
+                     "itemName": "username2",
+                     "displayName": "姓名2",
+                     "fieldType": "text",
+                     "regexp": "[\\\\S]{1,128}",
+                     "maxFileSize": 100,
+                     "isRequired": false,
+                     "displayOrder": 0,
+                     "isDeleted": false,
+                     "isUnique": false,
+                     "itemValues": [
+                         {
+                             "option": "选项1",
+                             "value": "选项1的值",
+                             "isDefault": false
+                         },
+                         {
+                             "option": "选项2",
+                             "value": "选项2的值",
+                             "isDefault": true
+                         },
+                         {
+                             "option": "选项3",
+                             "value": "选项3的值",
+                             "isDefault": false
+                         }
+                     ]
+                 }
+             ]
+         }
+}

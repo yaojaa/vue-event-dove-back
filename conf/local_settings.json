@@ -1,0 +1,9 @@
+{
+  "port": "9000",
+  "serverUrl": "http://qa.www.eventdove.com",
+  "rethinkdbHost": "115.28.240.188",
+  "RabbitMQConfig": {
+    "connUrl": "amqp://115.28.240.188:5672",
+    "OPTS": {}
+  }
+}

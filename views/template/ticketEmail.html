@@ -1,0 +1,55 @@
+<!DOCTYPE html><!--[if IE]>  <html class="ie"> <![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title><%= eventName %>-电子票-邮件</title>
+        <style>
+            sup{top:-.4em}sub,sup{position:relative;vertical-align:baseline}sub{top:.4em}a:link,a:visited{text-decoration:none}@media (-webkit-min-device-pixel-ratio:0),(min--moz-device-pixel-ratio:0),screen and (min-device-pixel-ratio:0){.stl_view{font-size:10em;-webkit-transform:scale(.1);transform:scale(.1);-webkit-transform-origin:top left;-moz-transform-origin:top left}}.ie{font-size:1pt}.ie body{font-size:12em}.stl_01{position:absolute;white-space:nowrap}.stl_02{display:block;margin:0;width:51em;height:66em;border-style:none;font-size:1em;line-height:0}.stl_03{position:relative}.stl_04{position:absolute;top:0;left:0}.stl_05{position:relative;width:51em}.stl_06{height:6.6em}.ie .stl_06{height:66em}.stl_07{color:#323232;font-size:1.125em;font-family:"微软雅黑"}.stl_08{line-height:1.282222em}.stl_09{letter-spacing:-.0002em}.ie .stl_09{letter-spacing:0}.stl_10{color:#000;font-size:1em;font-family:"微软雅黑"}.stl_11{letter-spacing:-.0001em}.ie .stl_11{letter-spacing:0}.stl_12{color:#666}.stl_12,.stl_13{font-size:.75em;font-family:"微软雅黑"}.stl_13{color:#000}.ie .stl_14,.stl_14{letter-spacing:0}.stl_15{color:#666;font-size:.9375em;font-family:"微软雅黑"}.stl_16{letter-spacing:.0004em}.ie .stl_16{letter-spacing:.00063rem}.stl_17{color:#000;font-size:.9375em;font-family:"微软雅黑"}.stl_18{letter-spacing:.0007em}.ie .stl_18{letter-spacing:.00063rem}.stl_19{letter-spacing:.001em}.ie .stl_19{letter-spacing:.00125rem}.stl_20{letter-spacing:.0002em}.ie .stl_20{letter-spacing:0}.stl_21{font-size:1.169167em}.stl_21,.stl_22{color:#000;font-family:"微软雅黑"}.stl_22{font-size:.875em}
+        </style>
+    </head>
+    <body>
+        <div class="stl_02">
+            <div class="stl_view">
+                <div class="stl_05 stl_06">
+                    <div class="stl_01" style="top: 8.3458em; left:6.8442em;">
+                        <span class="stl_10 stl_08 stl_11"><%= eventName %> &nbsp;</span>
+                    </div>
+                    <div class="stl_01" style="top: 10.2858em; left:6.8442em;">
+                        <span class="stl_12 stl_08 stl_11" style="word-spacing:0.0008em;">主办： </span>
+                        <span class="stl_13 stl_08 stl_11" style="word-spacing:0.0008em;"><%= organizer %> &nbsp;</span>
+                    </div>
+                    <div class="stl_01" style="top: 11.2233em; left:6.8442em;">
+                        <span class="stl_12 stl_08 stl_09" style="word-spacing:-0.0007em;">时间：</span>
+                        <span class="stl_13 stl_08 stl_09" style="word-spacing:-0.0007em;"><%= eventTime %> &nbsp;</span>
+                    </div>
+                    <div class="stl_01" style="top: 12.1608em; left:6.8442em;">
+                        <span class="stl_12 stl_08 stl_14" style="word-spacing:-0.001em;">地点：</span>
+                        <span class="stl_13 stl_08 stl_14" style="word-spacing:-0.001em;"><%= address %> &nbsp;</span>
+                    </div>
+                    <div class="stl_01" style="top: 13.1608em; left:6.8442em;">
+                        <span class="stl_12 stl_08 stl_14" style="word-spacing:-0.001em;">下载地址：</span>
+                        <span class="stl_13 stl_08 stl_14" style="word-spacing:-0.001em;"><a href="<%= downloadUrl %>" target="_blank"><%= downloadUrl %></a> &nbsp;</span>
+                    </div>
+                    <div class="stl_01" style="top: 17.2592em; left:16.2192em;">
+                        <span class="stl_15 stl_08 stl_18" style="word-spacing:-0.0024em;">姓名：</span>
+                        <span class="stl_17 stl_08 stl_18" style="word-spacing:-0.0024em;"><%= name %> &nbsp;</span>
+                    </div>
+                    <div class="stl_01" style="top: 18.8217em; left:16.2192em;">
+                        <span class="stl_15 stl_08 stl_19" style="word-spacing:-0.0029em;">购票人：</span>
+                        <span class="stl_17 stl_08 stl_19" style="word-spacing:-0.0029em;"><%= buyerName %> &nbsp;</span>
+                    </div>
+                    <div class="stl_01" style="top: 20.3842em; left:16.2192em;">
+                        <span class="stl_15 stl_08 stl_20" style="word-spacing:-0.0013em;">购票时间：</span>
+                        <span class="stl_17 stl_08 stl_20" style="word-spacing:-0.0013em;"><%= buyTime %> &nbsp;</span>
+                    </div>
+                    <div class="stl_01" style="top: 25.8587em; left:6em;">
+                        <span class="stl_21 stl_08 stl_11">注意事项 &nbsp;</span>
+                    </div>
+                    <div class="stl_01" style="top: 28.5825em; left:6em;">
+                        <span class="stl_22 stl_08 stl_11">请打印您的门票，它是您的入场凭证，入场时请于检票口出示您的门票。 &nbsp;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

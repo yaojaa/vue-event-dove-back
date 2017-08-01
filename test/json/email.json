@@ -1,0 +1,27 @@
+{
+    "successfulEvent":{
+        "from":"support@eventdove.com",
+        "replyTo":"support@eventdove.com",
+        "emailTitle":"邮件测试标题_emailDove",
+        "fromName":"中国互联网大会主办方",
+        "receiver":"xiaoyong_luo@eventown.com,lisi@163.com,zhangshanwangermazi@necina.org",
+        "content":"邮件测试内容_emailDove",
+        "scheduledSendTimeType":"sendImmediately",
+        "eventId":"6243013912715988994",
+        "functionType":"promotion"
+    },
+
+
+    "successfulEvent2":{
+        "from":"support@eventdove.com",
+        "replyTo":"support@eventdove.com",
+        "emailTitle":"邮件测试标题_emailDove",
+        "fromName":"中国互联网大会主办方",
+        "receiver":"1764056344@qq.com,1999817271@qq.com,123305939@qq.com,1349891144@qq.com,260365833@qq.com,1833187760@qq.com,1723187739@qq.com,1721126262@qq.com,1823020194@qq.com,1845991094@qq.com,837125615@qq.com,1121871814@qq.com,1020866282@qq.com,1370366362@qq.com,375139232@qq.com,1861191685@qq.com,546003404@qq.com,1163081625@qq.com,1716421973@qq.com,1664834758@qq.com,1638224795@qq.com,603822591@qq.com,283253471@qq.com,1461665275@qq.com",
+        "content":"邮件测试内容_emailDove",
+        "scheduledSendTimeType":"sendImmediately",
+        "eventId":"6243013912715988994",
+        "functionType":"promotion"
+    }
+}
+

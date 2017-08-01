@@ -1,0 +1,16 @@
+{
+	"registerUserSuccess":
+	{
+		"accountStatus":  "active" ,
+		"basePrice": 0 ,
+		"ctime": "Sat Mar 04 2017 19:13:44 GMT+00:00",
+		"email": "event_test@eventdove.com",
+		"id":  "6243870883740520448" ,
+		"maxFee": 0 ,
+		"password":  "6d07cb385de022c6bd6ed3768eed526b" ,
+		"percent": 2.5 ,
+		"salt":  "JQmPnH" ,
+		"username": "event_test@eventdove.com",
+		"utime": "Sat Mar 04 2017 19:13:44 GMT+00:00"
+	}
+}

@@ -1,0 +1,24 @@
+{
+    "random": {
+        "generationMode"    : "random",
+        "discountType"      : "fixed",
+        "discountTypeValue" : "2",
+        "discountCodeCount" : "3",
+        "applyToAllTickets" : true,
+        "maxUseCount"       : 2,
+        "discountExpiryDate": "any"
+    },
+    "manualInput": {
+        "generationMode"    : "manualInput",
+        "discountCode"      : "z123456",
+        "discountType"      : "free",
+        "discountTypeValue" : -1,
+        "discountCodeCount" : "3",
+        "applyToAllTickets" : false,
+        "maxUseCount"       : 2,
+        "discountExpiryDate": "custom",
+        "startTime"         : "2017-01-22T08:33:35.000Z",
+        "endTime"           : "2017-05-23T08:33:35.000Z"
+    }
+}
+

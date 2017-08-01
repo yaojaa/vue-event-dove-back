@@ -1,0 +1,121 @@
+{
+	"order1":
+	{
+		"userId": "6243558604125900800",
+		"order":
+		[
+			{
+				"ticketName": "早鸟票",
+			    "total": 2,
+			    "defaultPrice": 20,
+			    "attendees":
+			    [
+			        {
+			            "name"        :  "王小二",
+			            "email"       :  "wanger@163.com",
+			            "fieldName1"  :  "有限责任公司"
+			        },
+			        {
+			            "name"        :  "李四",
+			            "email"       :  "lisi@163.com",
+			            "fieldName1"  :  "无限责任公司"
+			        }
+			    ]
+			},
+			{
+			    "ticketName": "早鸟票",
+			    "ticketId":"2",
+			    "total": 1,
+			    "defaultPrice": 20,
+			    "attendees":
+			    [
+			        {
+			            "name"        :  "张三",
+			            "email"       :  "zhangshan@163.com",
+			            "fieldName1"  :  "无限责任公司"
+			        }
+			    ]
+			}
+		],
+		"amount": 188,
+		"platform":"web",
+
+		"buyer":
+		{
+		    "name"    :  "张三",
+		    "email"   :  "zhangshan@163.com",
+		    "fieldName1"  :  "私人合伙企业"
+		},
+		"invoice":[
+			{
+			    "type"     :  "普通发票",
+			    "title"    :  "会唐科技有限公司",
+			    "serviceItem" : "信息服务费",
+			    "deliver"  :  "快递",
+			    "receiver" :  "武松",
+			    "contact"  :  "1350123456",
+			    "address"  :  "北京东城区解放路101号",
+			    "note"     :  "没什么好备注的"
+			}
+		]
+	},
+	"order2":
+	{
+		"userId": "6243558604125900800",
+		"order":
+		[
+			{
+				"ticketName": "早鸟票",
+			    "total": 2,
+			    "defaultPrice": 20,
+			    "attendees":
+			    [
+			        {
+			            "name"        :  "宋江",
+			            "email"       :  "songjiang@163.com",
+			            "fieldName1"  :  "有限责任公司"
+			        },
+			        {
+			            "name"        :  "卢俊义",
+			            "email"       :  "aaa@163.com",
+			            "fieldName1"  :  "无限责任公司"
+			        }
+			    ]
+			},
+			{
+			    "ticketName": "早鸟票",
+			    "total": 1,
+			    "defaultPrice": 20,
+			    "attendees":
+			    [
+			        {
+			            "name"        :  "林冲",
+			            "email"       :  "lincong@163.com",
+			            "fieldName1"  :  "无限责任公司"
+			        }
+			    ]
+			}
+		],
+		"amount": 188,
+		"platform":"web",
+
+		"buyer":
+		{
+		    "name"    :  "张三",
+		    "email"   :  "zhangshan@163.com",
+		    "fieldName1"  :  "私人合伙企业"
+		},
+		"invoice":[
+			{
+			    "type"     :  "普通发票",
+			    "title"    :  "会唐科技有限公司",
+			    "serviceItem" : "信息服务费",
+			    "deliver"  :  "快递",
+			    "receiver" :  "武松",
+			    "contact"  :  "1350123456",
+			    "address"  :  "北京东城区解放路101号",
+			    "note"     :  "没什么好备注的"
+			}
+		]
+	}
+}

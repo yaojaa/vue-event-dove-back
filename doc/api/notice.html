@@ -1,0 +1,344 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Eventdove API</title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"><style>@import url('https://fonts.googleapis.com/css?family=Roboto:400,700|Inconsolata|Raleway:200');.hljs-comment,.hljs-title{color:#8e908c}.hljs-variable,.hljs-attribute,.hljs-tag,.hljs-regexp,.ruby .hljs-constant,.xml .hljs-tag .hljs-title,.xml .hljs-pi,.xml .hljs-doctype,.html .hljs-doctype,.css .hljs-id,.css .hljs-class,.css .hljs-pseudo{color:#c82829}.hljs-number,.hljs-preprocessor,.hljs-pragma,.hljs-built_in,.hljs-literal,.hljs-params,.hljs-constant{color:#f5871f}.ruby .hljs-class .hljs-title,.css .hljs-rules .hljs-attribute{color:#eab700}.hljs-string,.hljs-value,.hljs-inheritance,.hljs-header,.ruby .hljs-symbol,.xml .hljs-cdata{color:#718c00}.css .hljs-hexcolor{color:#3e999f}.hljs-function,.python .hljs-decorator,.python .hljs-title,.ruby .hljs-function .hljs-title,.ruby .hljs-title .hljs-keyword,.perl .hljs-sub,.javascript .hljs-title,.coffeescript .hljs-title{color:#4271ae}.hljs-keyword,.javascript .hljs-function{color:#8959a8}.hljs{display:block;background:white;color:#4d4d4c;padding:.5em}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.5}.right .hljs-comment{color:#969896}.right .css .hljs-class,.right .css .hljs-id,.right .css .hljs-pseudo,.right .hljs-attribute,.right .hljs-regexp,.right .hljs-tag,.right .hljs-variable,.right .html .hljs-doctype,.right .ruby .hljs-constant,.right .xml .hljs-doctype,.right .xml .hljs-pi,.right .xml .hljs-tag .hljs-title{color:#c66}.right .hljs-built_in,.right .hljs-constant,.right .hljs-literal,.right .hljs-number,.right .hljs-params,.right .hljs-pragma,.right .hljs-preprocessor{color:#de935f}.right .css .hljs-rule .hljs-attribute,.right .ruby .hljs-class .hljs-title{color:#f0c674}.right .hljs-header,.right .hljs-inheritance,.right .hljs-name,.right .hljs-string,.right .hljs-value,.right .ruby .hljs-symbol,.right .xml .hljs-cdata{color:#b5bd68}.right .css .hljs-hexcolor,.right .hljs-title{color:#8abeb7}.right .coffeescript .hljs-title,.right .hljs-function,.right .javascript .hljs-title,.right .perl .hljs-sub,.right .python .hljs-decorator,.right .python .hljs-title,.right .ruby .hljs-function .hljs-title,.right .ruby .hljs-title .hljs-keyword{color:#81a2be}.right .hljs-keyword,.right .javascript .hljs-function{color:#b294bb}.right .hljs{display:block;overflow-x:auto;background:#1d1f21;color:#c5c8c6;padding:.5em;-webkit-text-size-adjust:none}.right .coffeescript .javascript,.right .javascript .xml,.right .tex .hljs-formula,.right .xml .css,.right .xml .hljs-cdata,.right .xml .javascript,.right .xml .vbscript{opacity:.5}body{color:black;background:white;font:400 14px / 1.42 'Roboto',Helvetica,sans-serif}header{border-bottom:1px solid #f2f2f2;margin-bottom:12px}h1,h2,h3,h4,h5{color:black;margin:12px 0}h1 .permalink,h2 .permalink,h3 .permalink,h4 .permalink,h5 .permalink{margin-left:0;opacity:0;transition:opacity .25s ease}h1:hover .permalink,h2:hover .permalink,h3:hover .permalink,h4:hover .permalink,h5:hover .permalink{opacity:1}.triple h1 .permalink,.triple h2 .permalink,.triple h3 .permalink,.triple h4 .permalink,.triple h5 .permalink{opacity:.15}.triple h1:hover .permalink,.triple h2:hover .permalink,.triple h3:hover .permalink,.triple h4:hover .permalink,.triple h5:hover .permalink{opacity:.15}h1{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:36px}h2{font:200 36px 'Raleway',Helvetica,sans-serif;font-size:30px}h3{font-size:100%;text-transform:uppercase}h5{font-size:100%;font-weight:normal}p{margin:0 0 10px}p.choices{line-height:1.6}a{color:#428bca;text-decoration:none}li p{margin:0}hr.split{border:0;height:1px;width:100%;padding-left:6px;margin:12px auto;background-image:linear-gradient(to right, rgba(0,0,0,0) 20%, rgba(0,0,0,0.2) 51.4%, rgba(255,255,255,0.2) 51.4%, rgba(255,255,255,0) 80%)}dl dt{float:left;width:130px;clear:left;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:700}dl dd{margin-left:150px}blockquote{color:rgba(0,0,0,0.5);font-size:15.5px;padding:10px 20px;margin:12px 0;border-left:5px solid #e8e8e8}blockquote p:last-child{margin-bottom:0}pre{background-color:#f5f5f5;padding:12px;border:1px solid #cfcfcf;border-radius:6px;overflow:auto}pre code{color:black;background-color:transparent;padding:0;border:none}code{color:#444;background-color:#f5f5f5;font:'Inconsolata',monospace;padding:1px 4px;border:1px solid #cfcfcf;border-radius:3px}ul,ol{padding-left:2em}table{border-collapse:collapse;border-spacing:0;margin-bottom:12px}table tr:nth-child(2n){background-color:#fafafa}table th,table td{padding:6px 12px;border:1px solid #e6e6e6}.text-muted{opacity:.5}.note,.warning{padding:.3em 1em;margin:1em 0;border-radius:2px;font-size:90%}.note h1,.warning h1,.note h2,.warning h2,.note h3,.warning h3,.note h4,.warning h4,.note h5,.warning h5,.note h6,.warning h6{font-family:200 36px 'Raleway',Helvetica,sans-serif;font-size:135%;font-weight:500}.note p,.warning p{margin:.5em 0}.note{color:black;background-color:#f0f6fb;border-left:4px solid #428bca}.note h1,.note h2,.note h3,.note h4,.note h5,.note h6{color:#428bca}.warning{color:black;background-color:#fbf1f0;border-left:4px solid #c9302c}.warning h1,.warning h2,.warning h3,.warning h4,.warning h5,.warning h6{color:#c9302c}header{margin-top:24px}nav{position:fixed;top:24px;bottom:0;overflow-y:auto}nav .resource-group{padding:0}nav .resource-group .heading{position:relative}nav .resource-group .heading .chevron{position:absolute;top:12px;right:12px;opacity:.5}nav .resource-group .heading a{display:block;color:black;opacity:.7;border-left:2px solid transparent;margin:0}nav .resource-group .heading a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul{list-style-type:none;padding-left:0}nav ul a{display:block;font-size:13px;color:rgba(0,0,0,0.7);padding:8px 12px;border-top:1px solid #d9d9d9;border-left:2px solid transparent;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}nav ul a:hover{text-decoration:none;background-color:bad-color;border-left:2px solid black}nav ul>li{margin:0}nav ul>li:first-child{margin-top:-12px}nav ul>li:last-child{margin-bottom:-12px}nav ul ul a{padding-left:24px}nav ul ul li{margin:0}nav ul ul li:first-child{margin-top:0}nav ul ul li:last-child{margin-bottom:0}nav>div>div>ul>li:first-child>a{border-top:none}.preload *{transition:none !important}.pull-left{float:left}.pull-right{float:right}.badge{display:inline-block;float:right;min-width:10px;min-height:14px;padding:3px 7px;font-size:12px;color:#000;background-color:#f2f2f2;border-radius:10px;margin:-2px 0}.badge.get{color:#70bbe1;background-color:#d9edf7}.badge.head{color:#70bbe1;background-color:#d9edf7}.badge.options{color:#70bbe1;background-color:#d9edf7}.badge.put{color:#f0db70;background-color:#fcf8e3}.badge.patch{color:#f0db70;background-color:#fcf8e3}.badge.post{color:#93cd7c;background-color:#dff0d8}.badge.delete{color:#ce8383;background-color:#f2dede}.collapse-button{float:right}.collapse-button .close{display:none;color:#428bca;cursor:pointer}.collapse-button .open{color:#428bca;cursor:pointer}.collapse-button.show .close{display:inline}.collapse-button.show .open{display:none}.collapse-content{max-height:0;overflow:hidden;transition:max-height .3s ease-in-out}nav{width:220px}.container{max-width:940px;margin-left:auto;margin-right:auto}.container .row .content{margin-left:244px;width:696px}.container .row:after{content:'';display:block;clear:both}.container-fluid nav{width:22%}.container-fluid .row .content{margin-left:24%}.container-fluid.triple nav{width:16.5%;padding-right:1px}.container-fluid.triple .row .content{position:relative;margin-left:16.5%;padding-left:24px}.middle:before,.middle:after{content:'';display:table}.middle:after{clear:both}.middle{box-sizing:border-box;width:51.5%;padding-right:12px}.right{box-sizing:border-box;float:right;width:48.5%;padding-left:12px}.right a{color:#428bca}.right h1,.right h2,.right h3,.right h4,.right h5,.right p,.right div{color:white}.right pre{background-color:#1d1f21;border:1px solid #1d1f21}.right pre code{color:#c5c8c6}.right .description{margin-top:12px}.triple .resource-heading{font-size:125%}.definition{margin-top:12px;margin-bottom:12px}.definition .method{font-weight:bold}.definition .method.get{color:#2e8ab8}.definition .method.head{color:#2e8ab8}.definition .method.options{color:#2e8ab8}.definition .method.post{color:#56b82e}.definition .method.put{color:#b8a22e}.definition .method.patch{color:#b8a22e}.definition .method.delete{color:#b82e2e}.definition .uri{word-break:break-all;word-wrap:break-word}.definition .hostname{opacity:.5}.example-names{background-color:#eee;padding:12px;border-radius:6px}.example-names .tab-button{cursor:pointer;color:black;border:1px solid #ddd;padding:6px;margin-left:12px}.example-names .tab-button.active{background-color:#d5d5d5}.right .example-names{background-color:#444}.right .example-names .tab-button{color:white;border:1px solid #666;border-radius:6px}.right .example-names .tab-button.active{background-color:#5e5e5e}#nav-background{position:fixed;left:0;top:0;bottom:0;width:16.5%;padding-right:14.4px;background-color:#fbfbfb;border-right:1px solid #f0f0f0;z-index:-1}#right-panel-background{position:absolute;right:-12px;top:-12px;bottom:-12px;width:48.6%;background-color:#333;z-index:-1}@media (max-width:1200px){nav{width:198px}.container{max-width:840px}.container .row .content{margin-left:224px;width:606px}}@media (max-width:992px){nav{width:169.4px}.container{max-width:720px}.container .row .content{margin-left:194px;width:526px}}@media (max-width:768px){nav{display:none}.container{width:95%;max-width:none}.container .row .content,.container-fluid .row .content,.container-fluid.triple .row .content{margin-left:auto;margin-right:auto;width:95%}#nav-background{display:none}#right-panel-background{width:48.6%}}.back-to-top{position:fixed;z-index:1;bottom:0;right:24px;padding:4px 8px;color:rgba(0,0,0,0.5);background-color:#f2f2f2;text-decoration:none !important;border-top:1px solid #d9d9d9;border-left:1px solid #d9d9d9;border-right:1px solid #d9d9d9;border-top-left-radius:3px;border-top-right-radius:3px}.resource-group{padding:12px;margin-bottom:12px;background-color:white;border:1px solid #d9d9d9;border-radius:6px}.resource-group h2.group-heading,.resource-group .heading a{padding:12px;margin:-12px -12px 12px -12px;background-color:#f2f2f2;border-bottom:1px solid #d9d9d9;border-top-left-radius:6px;border-top-right-radius:6px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.triple .content .resource-group{padding:0;border:none}.triple .content .resource-group h2.group-heading,.triple .content .resource-group .heading a{margin:0 0 12px 0;border:1px solid #d9d9d9}nav .resource-group .heading a{padding:12px;margin-bottom:0}nav .resource-group .collapse-content{padding:0}.action{margin-bottom:12px;padding:12px 12px 0 12px;overflow:hidden;border:1px solid transparent;border-radius:6px}.action h4.action-heading{padding:6px 12px;margin:-12px -12px 12px -12px;border-bottom:1px solid transparent;border-top-left-radius:6px;border-top-right-radius:6px;overflow:hidden}.action h4.action-heading .name{float:right;font-weight:normal;padding:6px 0}.action h4.action-heading .method{padding:6px 12px;margin-right:12px;border-radius:3px;display:inline-block}.action h4.action-heading .method.get{color:#000;background-color:#337ab7}.action h4.action-heading .method.head{color:#000;background-color:#337ab7}.action h4.action-heading .method.options{color:#000;background-color:#337ab7}.action h4.action-heading .method.put{color:#000;background-color:#ed9c28}.action h4.action-heading .method.patch{color:#000;background-color:#ed9c28}.action h4.action-heading .method.post{color:#000;background-color:#5cb85c}.action h4.action-heading .method.delete{color:#000;background-color:#d9534f}.action h4.action-heading code{color:#444;background-color:#f5f5f5;border-color:#cfcfcf;font-weight:normal;word-break:break-all;display:inline-block;margin-top:2px}.action dl.inner{padding-bottom:2px}.action .title{border-bottom:1px solid white;margin:0 -12px -1px -12px;padding:12px}.action.get{border-color:#bce8f1}.action.get h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.head{border-color:#bce8f1}.action.head h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.options{border-color:#bce8f1}.action.options h4.action-heading{color:#337ab7;background:#d9edf7;border-bottom-color:#bce8f1}.action.post{border-color:#d6e9c6}.action.post h4.action-heading{color:#5cb85c;background:#dff0d8;border-bottom-color:#d6e9c6}.action.put{border-color:#faebcc}.action.put h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.patch{border-color:#faebcc}.action.patch h4.action-heading{color:#ed9c28;background:#fcf8e3;border-bottom-color:#faebcc}.action.delete{border-color:#ebccd1}.action.delete h4.action-heading{color:#d9534f;background:#f2dede;border-bottom-color:#ebccd1}</style></head><body class="preload"><a href="#top" class="text-muted back-to-top"><i class="fa fa-toggle-up"></i>&nbsp;Back to top</a><div class="container-fluid"><div class="row"><nav><div class="resource-group"><div class="heading"><div class="chevron"><i class="open fa fa-angle-down"></i></div><a href="#推广邮件短信相关">推广邮件短信相关</a></div><div class="collapse-content"><ul><li><a href="#推广邮件短信相关-生成推广邮件短信-post"><span class="badge post"><i class="fa fa-plus"></i></span>生成推广邮件短信</a></li><li><a href="#推广邮件短信相关-根据id查询邮件短信-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>根据id查询邮件短信</a></li><li><a href="#推广邮件短信相关-分页查询邮件短信-get"><span class="badge get"><i class="fa fa-arrow-down"></i></span>分页查询邮件短信</a></li><li><a href="#推广邮件短信相关-删除查询邮件短信-delete"><span class="badge delete"><i class="fa fa-times"></i></span>删除查询邮件短信</a></li></ul></div></div><p style="text-align: center; word-wrap: break-word;"><a href="http://qa.www.eventdove.com/api">http://qa.www.eventdove.com/api</a></p></nav><div class="content"><header><h1 id="top">Eventdove API</h1></header><p>欢迎使用 <strong>Eventdove</strong> API ，这些 API 提供了操作 <strong>Eventdove</strong> 数据的接口。</p>
+<section id="推广邮件短信相关" class="resource-group"><h2 class="group-heading">推广邮件短信相关 <a href="#推广邮件短信相关" class="permalink">&para;</a></h2><div id="推广邮件短信相关-生成推广邮件短信" class="resource"><h3 class="resource-heading">生成推广邮件短信 <a href="#推广邮件短信相关-生成推广邮件短信" class="permalink">&nbsp;&para;</a></h3><div id="推广邮件短信相关-生成推广邮件短信-post" class="action post"><h4 class="action-heading"><div class="name">生成推广邮件短信</div><a href="#推广邮件短信相关-生成推广邮件短信-post" class="method post">POST</a><code class="uri">/notice/addSmsEmailRecord</code></h4><h4>Example URI</h4><div class="definition"><span class="method post">POST</span>&nbsp;<span class="uri"><span class="hostname">http://qa.www.eventdove.com/api</span>/notice/addSmsEmailRecord</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>receiver</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>wanger@163.com,lisi@163.com</span></span><p>短信或邮件收件人 备注: 多个以“,”隔开</p>
+</dd><dt>content</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>测试测试</span></span><p>短信邮件发送的内容</p>
+</dd><dt>scheduledSendTimeType</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>timedTransmission</span></span><p>任务执行的时间类型,立即发送&quot;sendImmediately&quot;,定时发送&quot;timedTransmission&quot;</p>
+</dd><dt>sendTime</dt><dd><code>date</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>2429-12-30T00:00:00.000Z,</span></span><p>计划任务将要在什么时候执行的时间  备注: scheduledSendTimeType 为 sendImmediately 时该值为空或不填</p>
+</dd><dt>type</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>email</span></span><p>记录类型,短信类型&quot;sms&quot;,邮件类型&quot;email&quot;</p>
+</dd><dt>title</dt><dd><code>string</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>推广测试邮件</span></span><p>标题     备注: type 为 sms 时该值为空或不填</p>
+</dd><dt>userId</dt><dd><code>number</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>6235817071733772288</span></span><p>用户Id</p>
+</dd><dt>eventId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>6237218272375345156</span></span><p>活动Id</p>
+</dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span><br><span class="hljs-attribute">Cookie</span>: <span class="hljs-string">locale=s%3Aj%3A%5B%22*%22%5D.FuNuaF19hGDOzcW2yUzMh1qE0MDHLYLjgCc9Zu42CtE</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">title</span>": <span class="hljs-value"><span class="hljs-string">"推广测试邮件"</span></span>,
+  "<span class="hljs-attribute">receiver</span>": <span class="hljs-value"><span class="hljs-string">"wanger@163.com,lisi@163.com"</span></span>,
+  "<span class="hljs-attribute">content</span>": <span class="hljs-value"><span class="hljs-string">"测试测试"</span></span>,
+  "<span class="hljs-attribute">scheduledSendTimeType</span>": <span class="hljs-value"><span class="hljs-string">"timedTransmission"</span></span>,
+  "<span class="hljs-attribute">sendTime</span>": <span class="hljs-value"><span class="hljs-string">"2429-12-30T00:00:00.000Z"</span></span>,
+  "<span class="hljs-attribute">eventId</span>": <span class="hljs-value"><span class="hljs-string">"6237218272375345156"</span></span>,
+  "<span class="hljs-attribute">userId</span>": <span class="hljs-value"><span class="hljs-string">"6235817071733772288"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"email"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span><br><span class="hljs-attribute">Access-Control-Allow-Origin</span>: <span class="hljs-string">*</span><br><span class="hljs-attribute">X-Powered-By</span>: <span class="hljs-string">Express</span><br><span class="hljs-attribute">Etag</span>: <span class="hljs-string">W/"20c-PwV1uuGCjs2m1ED1fSDUAg"</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">content</span>": <span class="hljs-value"><span class="hljs-string">"测试测试"</span></span>,
+  "<span class="hljs-attribute">scheduledSendTimeType</span>": <span class="hljs-value"><span class="hljs-string">"timedTransmission"</span></span>,
+  "<span class="hljs-attribute">eventId</span>": <span class="hljs-value"><span class="hljs-string">"6237218272375345156"</span></span>,
+  "<span class="hljs-attribute">userId</span>": <span class="hljs-value"><span class="hljs-string">"6235817071733772288"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"email"</span></span>,
+  "<span class="hljs-attribute">scheduledSendTime</span>": <span class="hljs-value"><span class="hljs-string">"2429-12-30T00:00:00.000Z"</span></span>,
+  "<span class="hljs-attribute">receivers</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">receiverName</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+      "<span class="hljs-attribute">receiverNumber</span>": <span class="hljs-value"><span class="hljs-string">"wanger@163.com"</span></span>,
+      "<span class="hljs-attribute">sendStatus</span>": <span class="hljs-value"><span class="hljs-string">"toBeSent"</span>
+    </span>},
+    {
+      "<span class="hljs-attribute">receiverName</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+      "<span class="hljs-attribute">receiverNumber</span>": <span class="hljs-value"><span class="hljs-string">"lisi@163.com"</span></span>,
+      "<span class="hljs-attribute">sendStatus</span>": <span class="hljs-value"><span class="hljs-string">"toBeSent"</span>
+    </span>}
+  ]</span>,
+  "<span class="hljs-attribute">templateId</span>": <span class="hljs-value"><span class="hljs-string">"0"</span></span>,
+  "<span class="hljs-attribute">emailTitle</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+  "<span class="hljs-attribute">isDraft</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+  "<span class="hljs-attribute">isDelete</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+  "<span class="hljs-attribute">ctime</span>": <span class="hljs-value"><span class="hljs-string">"2017-02-17T10:09:56.634Z"</span></span>,
+  "<span class="hljs-attribute">utime</span>": <span class="hljs-value"><span class="hljs-string">"2017-02-17T10:09:56.634Z"</span></span>,
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"6238298215846907904"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="推广邮件短信相关-根据id查询邮件短信" class="resource"><h3 class="resource-heading">根据id查询邮件短信 <a href="#推广邮件短信相关-根据id查询邮件短信" class="permalink">&nbsp;&para;</a></h3><div id="推广邮件短信相关-根据id查询邮件短信-get" class="action get"><h4 class="action-heading"><div class="name">根据id查询邮件短信</div><a href="#推广邮件短信相关-根据id查询邮件短信-get" class="method get">GET</a><code class="uri">/notice/getEmailAndSmsRecord/:id/:userId</code></h4><p>根据根据id查询邮件短信请求URL为RESTful风格
+实例: /notice/getEmailAndSmsRecord/6238258188760780800/6235817071733772288</p>
+<h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">http://qa.www.eventdove.com/api</span>/notice/getEmailAndSmsRecord/:id/:userId</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>6238298215846907904</span></span><p>推广记录Id</p>
+</dd><dt>userId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>6235817071733772288</span></span><p>用户Id</p>
+</dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span><br><span class="hljs-attribute">Cookie</span>: <span class="hljs-string">locale=s%3Aj%3A%5B%22*%22%5D.FuNuaF19hGDOzcW2yUzMh1qE0MDHLYLjgCc9Zu42CtE</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span><br><span class="hljs-attribute">Access-Control-Allow-Origin</span>: <span class="hljs-string">*</span><br><span class="hljs-attribute">X-Powered-By</span>: <span class="hljs-string">Express</span><br><span class="hljs-attribute">Etag</span>: <span class="hljs-string">W/"20b-C1NTCC0YSIW5nc+jQPQCLg"</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">content</span>": <span class="hljs-value"><span class="hljs-string">"测试测试"</span></span>,
+  "<span class="hljs-attribute">ctime</span>": <span class="hljs-value"><span class="hljs-string">"2017-02-17T07:30:53.433Z"</span></span>,
+  "<span class="hljs-attribute">emailTitle</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+  "<span class="hljs-attribute">eventId</span>": <span class="hljs-value"><span class="hljs-string">"6237218272375345156"</span></span>,
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"6238258188760780800"</span></span>,
+  "<span class="hljs-attribute">isDelete</span>": <span class="hljs-value"><span class="hljs-literal">true</span></span>,
+  "<span class="hljs-attribute">isDraft</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+  "<span class="hljs-attribute">receivers</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">receiverName</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+      "<span class="hljs-attribute">receiverNumber</span>": <span class="hljs-value"><span class="hljs-string">"wanger@163.com"</span></span>,
+      "<span class="hljs-attribute">sendStatus</span>": <span class="hljs-value"><span class="hljs-string">"toBeSent"</span>
+    </span>},
+    {
+      "<span class="hljs-attribute">receiverName</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+      "<span class="hljs-attribute">receiverNumber</span>": <span class="hljs-value"><span class="hljs-string">"lisi@163.com"</span></span>,
+      "<span class="hljs-attribute">sendStatus</span>": <span class="hljs-value"><span class="hljs-string">"toBeSent"</span>
+    </span>}
+  ]</span>,
+  "<span class="hljs-attribute">scheduledSendTime</span>": <span class="hljs-value"><span class="hljs-string">"2429-12-30T00:00:00.000Z"</span></span>,
+  "<span class="hljs-attribute">scheduledSendTimeType</span>": <span class="hljs-value"><span class="hljs-string">"timedTransmission"</span></span>,
+  "<span class="hljs-attribute">templateId</span>": <span class="hljs-value"><span class="hljs-string">"0"</span></span>,
+  "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"sms"</span></span>,
+  "<span class="hljs-attribute">userId</span>": <span class="hljs-value"><span class="hljs-string">"6235817071733772288"</span></span>,
+  "<span class="hljs-attribute">utime</span>": <span class="hljs-value"><span class="hljs-string">"2017-02-17T07:30:53.433Z"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="推广邮件短信相关-分页查询邮件短信" class="resource"><h3 class="resource-heading">分页查询邮件短信 <a href="#推广邮件短信相关-分页查询邮件短信" class="permalink">&nbsp;&para;</a></h3><div id="推广邮件短信相关-分页查询邮件短信-get" class="action get"><h4 class="action-heading"><div class="name">分页查询邮件短信</div><a href="#推广邮件短信相关-分页查询邮件短信-get" class="method get">GET</a><code class="uri">/notice/getAllEmailAndSmsRecord/{?eventId,type,state,page,limit,total}</code></h4><h4>Example URI</h4><div class="definition"><span class="method get">GET</span>&nbsp;<span class="uri"><span class="hostname">http://qa.www.eventdove.com/api</span>/notice/getAllEmailAndSmsRecord/?<span class="hljs-attribute">eventId=</span><span class="hljs-literal">6237218272375345156</span>&<span class="hljs-attribute">type=</span><span class="hljs-literal">sms</span>&<span class="hljs-attribute">state=</span><span class="hljs-literal">all</span>&<span class="hljs-attribute">page=</span><span class="hljs-literal">1</span>&<span class="hljs-attribute">limit=</span><span class="hljs-literal">10</span>&<span class="hljs-attribute">total=</span><span class="hljs-literal">-1</span></span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>page</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>1</span></span><p>当前页数</p>
+</dd><dt>limit</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>10</span></span><p>每一页数量</p>
+</dd><dt>total</dt><dd><code>number</code>&nbsp;<span>(optional)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>-1</span></span><p>总记录数(备注：-1或不传为重查总记录数)</p>
+</dd><dt>eventId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>6237218272375345156</span></span><p>活动Id</p>
+</dd><dt>type</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>sms</span></span><p>记录类型 sms: 短信 email: 邮件</p>
+</dd><dt>state</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>all</span></span><p>记录状态  delete 查询删除  all 查询所有  not: 查询未删除</p>
+</dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span><br><span class="hljs-attribute">Cookie</span>: <span class="hljs-string">locale=s%3Aj%3A%5B%22*%22%5D.FuNuaF19hGDOzcW2yUzMh1qE0MDHLYLjgCc9Zu42CtE</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span><br><span class="hljs-attribute">Access-Control-Allow-Origin</span>: <span class="hljs-string">*</span><br><span class="hljs-attribute">X-Powered-By</span>: <span class="hljs-string">Express</span><br><span class="hljs-attribute">Etag</span>: <span class="hljs-string">W/"25b-0NlRY03+oNhhqP7BOLi8lA"</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">perPage</span>": <span class="hljs-value"><span class="hljs-number">10</span></span>,
+  "<span class="hljs-attribute">total</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">items</span>": <span class="hljs-value">[
+    {
+      "<span class="hljs-attribute">content</span>": <span class="hljs-value"><span class="hljs-string">"测试测试"</span></span>,
+      "<span class="hljs-attribute">ctime</span>": <span class="hljs-value"><span class="hljs-string">"2017-02-17T07:30:53.433Z"</span></span>,
+      "<span class="hljs-attribute">emailTitle</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+      "<span class="hljs-attribute">eventId</span>": <span class="hljs-value"><span class="hljs-string">"6237218272375345156"</span></span>,
+      "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"6238258188760780800"</span></span>,
+      "<span class="hljs-attribute">isDelete</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+      "<span class="hljs-attribute">isDraft</span>": <span class="hljs-value"><span class="hljs-literal">false</span></span>,
+      "<span class="hljs-attribute">receivers</span>": <span class="hljs-value">[
+        {
+          "<span class="hljs-attribute">receiverName</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+          "<span class="hljs-attribute">receiverNumber</span>": <span class="hljs-value"><span class="hljs-string">"wanger@163.com"</span></span>,
+          "<span class="hljs-attribute">sendStatus</span>": <span class="hljs-value"><span class="hljs-string">"toBeSent"</span>
+        </span>},
+        {
+          "<span class="hljs-attribute">receiverName</span>": <span class="hljs-value"><span class="hljs-string">""</span></span>,
+          "<span class="hljs-attribute">receiverNumber</span>": <span class="hljs-value"><span class="hljs-string">"lisi@163.com"</span></span>,
+          "<span class="hljs-attribute">sendStatus</span>": <span class="hljs-value"><span class="hljs-string">"toBeSent"</span>
+        </span>}
+      ]</span>,
+      "<span class="hljs-attribute">scheduledSendTime</span>": <span class="hljs-value"><span class="hljs-string">"2429-12-30T00:00:00.000Z"</span></span>,
+      "<span class="hljs-attribute">scheduledSendTimeType</span>": <span class="hljs-value"><span class="hljs-string">"timedTransmission"</span></span>,
+      "<span class="hljs-attribute">templateId</span>": <span class="hljs-value"><span class="hljs-string">"0"</span></span>,
+      "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"sms"</span></span>,
+      "<span class="hljs-attribute">userId</span>": <span class="hljs-value"><span class="hljs-string">"6235817071733772288"</span></span>,
+      "<span class="hljs-attribute">utime</span>": <span class="hljs-value"><span class="hljs-string">"2017-02-17T07:30:53.433Z"</span>
+    </span>}
+  ]</span>,
+  "<span class="hljs-attribute">currentPageTotal</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">totalPage</span>": <span class="hljs-value"><span class="hljs-number">1</span></span>,
+  "<span class="hljs-attribute">page</span>": <span class="hljs-value"><span class="hljs-number">1</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div></div></div><div id="推广邮件短信相关-删除查询邮件短信" class="resource"><h3 class="resource-heading">删除查询邮件短信 <a href="#推广邮件短信相关-删除查询邮件短信" class="permalink">&nbsp;&para;</a></h3><div id="推广邮件短信相关-删除查询邮件短信-delete" class="action delete"><h4 class="action-heading"><div class="name">删除查询邮件短信</div><a href="#推广邮件短信相关-删除查询邮件短信-delete" class="method delete">DELETE</a><code class="uri">/notice/deleteSmsEmailRecord</code></h4><h4>Example URI</h4><div class="definition"><span class="method delete">DELETE</span>&nbsp;<span class="uri"><span class="hostname">http://qa.www.eventdove.com/api</span>/notice/deleteSmsEmailRecord</span></div><div class="title"><strong>URI Parameters</strong><div class="collapse-button show"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><dl class="inner"><dt>id</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>6238298215846907904</span></span><p>推广记录Id</p>
+</dd><dt>userId</dt><dd><code>string</code>&nbsp;<span class="required">(required)</span>&nbsp;<span class="text-muted example"><strong>Example:&nbsp;</strong><span>6235817071733772288</span></span><p>用户Id</p>
+</dd></dl></div><div class="title"><strong>Request</strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span><br><span class="hljs-attribute">Cookie</span>: <span class="hljs-string">locale=s%3Aj%3A%5B%22*%22%5D.FuNuaF19hGDOzcW2yUzMh1qE0MDHLYLjgCc9Zu42CtE</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>{
+  "<span class="hljs-attribute">id</span>": <span class="hljs-value"><span class="hljs-string">"6238298215846907904"</span></span>,
+  "<span class="hljs-attribute">userId</span>": <span class="hljs-value"><span class="hljs-string">"6235817071733772288"</span>
+</span>}</code></pre><div style="height: 1px;"></div></div></div><div class="title"><strong>Response&nbsp;&nbsp;<code>200</code></strong><div class="collapse-button"><span class="close">Hide</span><span class="open">Show</span></div></div><div class="collapse-content"><div class="inner"><h5>Headers</h5><pre><code><span class="hljs-attribute">Content-Type</span>: <span class="hljs-string">application/json; charset=utf-8</span><br><span class="hljs-attribute">Access-Control-Allow-Origin</span>: <span class="hljs-string">*</span><br><span class="hljs-attribute">X-Powered-By</span>: <span class="hljs-string">Express</span><br><span class="hljs-attribute">Etag</span>: <span class="hljs-string">W/"c-AAfRcN4Bfa/CZqoDkm1/AA"</span></code></pre><div style="height: 1px;"></div><h5>Body</h5><pre><code>删除成功</code></pre><div style="height: 1px;"></div></div></div></div></div></section></div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 17 Feb 2017</p><script>/* eslint-env browser */
+/* eslint quotes: [2, "single"] */
+'use strict';
+
+/*
+  Determine if a string ends with another string.
+*/
+function endsWith(str, suffix) {
+    return str.indexOf(suffix, str.length - suffix.length) !== -1;
+}
+
+/*
+  Get a list of direct child elements by class name.
+*/
+function childrenByClass(element, name) {
+  var filtered = [];
+
+  for (var i = 0; i < element.children.length; i++) {
+    var child = element.children[i];
+    var classNames = child.className.split(' ');
+    if (classNames.indexOf(name) !== -1) {
+      filtered.push(child);
+    }
+  }
+
+  return filtered;
+}
+
+/*
+  Get an array [width, height] of the window.
+*/
+function getWindowDimensions() {
+  var w = window,
+      d = document,
+      e = d.documentElement,
+      g = d.body,
+      x = w.innerWidth || e.clientWidth || g.clientWidth,
+      y = w.innerHeight || e.clientHeight || g.clientHeight;
+
+  return [x, y];
+}
+
+/*
+  Collapse or show a request/response example.
+*/
+function toggleCollapseButton(event) {
+    var button = event.target.parentNode;
+    var content = button.parentNode.nextSibling;
+    var inner = content.children[0];
+
+    if (button.className.indexOf('collapse-button') === -1) {
+      // Clicked without hitting the right element?
+      return;
+    }
+
+    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        // Currently showing, so let's hide it
+        button.className = 'collapse-button';
+        content.style.maxHeight = '0px';
+    } else {
+        // Currently hidden, so let's show it
+        button.className = 'collapse-button show';
+        content.style.maxHeight = inner.offsetHeight + 12 + 'px';
+    }
+}
+
+function toggleTabButton(event) {
+    var i, index;
+    var button = event.target;
+
+    // Get index of the current button.
+    var buttons = childrenByClass(button.parentNode, 'tab-button');
+    for (i = 0; i < buttons.length; i++) {
+        if (buttons[i] === button) {
+            index = i;
+            button.className = 'tab-button active';
+        } else {
+            buttons[i].className = 'tab-button';
+        }
+    }
+
+    // Hide other tabs and show this one.
+    var tabs = childrenByClass(button.parentNode.parentNode, 'tab');
+    for (i = 0; i < tabs.length; i++) {
+        if (i === index) {
+            tabs[i].style.display = 'block';
+        } else {
+            tabs[i].style.display = 'none';
+        }
+    }
+}
+
+/*
+  Collapse or show a navigation menu. It will not be hidden unless it
+  is currently selected or `force` has been passed.
+*/
+function toggleCollapseNav(event, force) {
+    var heading = event.target.parentNode;
+    var content = heading.nextSibling;
+    var inner = content.children[0];
+
+    if (heading.className.indexOf('heading') === -1) {
+      // Clicked without hitting the right element?
+      return;
+    }
+
+    if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+      // Currently showing, so let's hide it, but only if this nav item
+      // is already selected. This prevents newly selected items from
+      // collapsing in an annoying fashion.
+      if (force || window.location.hash && endsWith(event.target.href, window.location.hash)) {
+        content.style.maxHeight = '0px';
+      }
+    } else {
+      // Currently hidden, so let's show it
+      content.style.maxHeight = inner.offsetHeight + 12 + 'px';
+    }
+}
+
+/*
+  Refresh the page after a live update from the server. This only
+  works in live preview mode (using the `--server` parameter).
+*/
+function refresh(body) {
+    document.querySelector('body').className = 'preload';
+    document.body.innerHTML = body;
+
+    // Re-initialize the page
+    init();
+    autoCollapse();
+
+    document.querySelector('body').className = '';
+}
+
+/*
+  Determine which navigation items should be auto-collapsed to show as many
+  as possible on the screen, based on the current window height. This also
+  collapses them.
+*/
+function autoCollapse() {
+  var windowHeight = getWindowDimensions()[1];
+  var itemsHeight = 64; /* Account for some padding */
+  var itemsArray = Array.prototype.slice.call(
+    document.querySelectorAll('nav .resource-group .heading'));
+
+  // Get the total height of the navigation items
+  itemsArray.forEach(function (item) {
+    itemsHeight += item.parentNode.offsetHeight;
+  });
+
+  // Should we auto-collapse any nav items? Try to find the smallest item
+  // that can be collapsed to show all items on the screen. If not possible,
+  // then collapse the largest item and do it again. First, sort the items
+  // by height from smallest to largest.
+  var sortedItems = itemsArray.sort(function (a, b) {
+    return a.parentNode.offsetHeight - b.parentNode.offsetHeight;
+  });
+
+  while (sortedItems.length && itemsHeight > windowHeight) {
+    for (var i = 0; i < sortedItems.length; i++) {
+      // Will collapsing this item help?
+      var itemHeight = sortedItems[i].nextSibling.offsetHeight;
+      if ((itemsHeight - itemHeight <= windowHeight) || i === sortedItems.length - 1) {
+        // It will, so let's collapse it, remove its content height from
+        // our total and then remove it from our list of candidates
+        // that can be collapsed.
+        itemsHeight -= itemHeight;
+        toggleCollapseNav({target: sortedItems[i].children[0]}, true);
+        sortedItems.splice(i, 1);
+        break;
+      }
+    }
+  }
+}
+
+/*
+  Initialize the interactive functionality of the page.
+*/
+function init() {
+    var i, j;
+
+    // Make collapse buttons clickable
+    var buttons = document.querySelectorAll('.collapse-button');
+    for (i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = toggleCollapseButton;
+
+        // Show by default? Then toggle now.
+        if (buttons[i].className.indexOf('show') !== -1) {
+            toggleCollapseButton({target: buttons[i].children[0]});
+        }
+    }
+
+    var responseCodes = document.querySelectorAll('.example-names');
+    for (i = 0; i < responseCodes.length; i++) {
+        var tabButtons = childrenByClass(responseCodes[i], 'tab-button');
+        for (j = 0; j < tabButtons.length; j++) {
+            tabButtons[j].onclick = toggleTabButton;
+
+            // Show by default?
+            if (j === 0) {
+                toggleTabButton({target: tabButtons[j]});
+            }
+        }
+    }
+
+    // Make nav items clickable to collapse/expand their content.
+    var navItems = document.querySelectorAll('nav .resource-group .heading');
+    for (i = 0; i < navItems.length; i++) {
+        navItems[i].onclick = toggleCollapseNav;
+
+        // Show all by default
+        toggleCollapseNav({target: navItems[i].children[0]});
+    }
+}
+
+// Initial call to set up buttons
+init();
+
+window.onload = function () {
+    autoCollapse();
+    // Remove the `preload` class to enable animations
+    document.querySelector('body').className = '';
+};
+</script></body></html>

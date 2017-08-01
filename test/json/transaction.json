@@ -1,0 +1,20 @@
+{
+	"ticketTransaction":
+	{
+		"timestamp": 1490738452000000,
+		"type":"TICKET",
+		"userId":"6243870883740520448",
+		"paymentMethod":"alipay",
+		"source":"source_ali@alipay.com",
+		"destination":"dst_ali@alipay.com",
+		"orderId":"678909876",
+		"paymentPlatformId":"38jierjowqjkljfsf",
+		"amount":100,
+		"eventdoveNetIncome":2.5,
+		"channelFee": 0.6,
+		"netIncome": 96.9,
+		"currency": "yuan",
+		"rawNotification": "this is the raw rawNotification data from alipay",
+		"orderDetail": {}
+	}
+}

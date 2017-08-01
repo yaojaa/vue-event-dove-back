@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>我的电子票(会鸽)</title>
+    <style>
+        svg{
+            width: 140px !important;
+            height: 140px !important;
+        }
+    </style>
+</head>
+
+<body style="padding:40px;">
+<table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;" width="100%">
+    <tbody>
+
+    <tr>
+        <td>
+            <strong style="font-size: 16px;">注意事项</strong>
+            <p style="font-size: 13px; color: #999; margin: 10px auto;">请打印您的门票或拍照此页面。它是您的入场凭证。入场时请于检票口出示您的门票。</p>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 4px solid #8fd1fc; padding: 20px; border-radius: 5px;">
+                <tbody>
+                <tr>
+                    <td>
+                        <div>
+                            <strong style="font-size: 16px;"><%= eventName %></strong>
+                            <p style="font-size: 13px; color: #999; margin: 10px auto;">主办方： <%= organizer %></p>
+                            <p style="font-size: 13px; color: #999; margin: 10px auto;">时间： <%= eventTime %></p>
+                            <p style="font-size: 13px; color: #999; margin: 0 auto 10px ;">地点：<%= address %></p>
+                        </div>
+                    </td>
+                    <td>
+                        <img src='<%= thumbnail %>' width="200px" style="float: right">
+                    </td>
+                </tr>
+                <tr>
+                    <td height="20" colspan="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border: 1px dotted #ccc; padding: 10px;">
+                            <tbody>
+
+                            <% _.forEach(tickets, function(item) { %>
+                                <tr>
+                                    <td width="200">
+                                        <div style="text-align: center">
+                                            <%= item.QRcode %>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div style="padding: 10px 0 0 20px;">
+                                            <p style="font-size: 13px; margin:5px 0;">票名：<%=item.ticketName %></p>
+                                            <p style="font-size: 13px; margin:5px 0;">参会人：<%=item.name %></p>
+                                            <p style="font-size: 13px; margin:5px 0;">购票人：<%=item.buyerName %></p>
+                                            <p style="font-size: 13px; margin:5px 0;">购票时间：<%=item.buyTime %></p>
+                                            <p style="font-size: 13px; color: #999; margin: 0;">签到码：<span style="font-weight: 500; font-size: 20px;"><%=item.attendeeId %></span></p>
+                                        </div>
+
+                                    </td>
+
+                                </tr>
+
+                            <% })%>
+                           
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td height="10" colspan="2"></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p style="font-size: 13px; color: #999; margin: 0 auto 10px ;">如有任何疑问请联系主办方：<br/>手机号：<%= mobile %>；邮箱：<%= email %></p></td>
+                </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td height="30"></td>
+    </tr>
+    <tr>
+        <td>
+            <div style="text-align: right"><img src="http://qa.www.eventdove.com/images/logo.png" width="120"><p style=" font-size: 13px; color:#999;">此门票通过会鸽购买</p></div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
